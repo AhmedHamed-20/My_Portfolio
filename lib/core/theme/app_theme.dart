@@ -12,6 +12,7 @@ class AppTheme {
       background: AppColors.lightBackgroundColor,
     ),
     splashColor: AppColors.primaryColor,
+    dividerColor: AppColors.lightDividerColor,
     cardColor: AppColors.lightCardColor,
     primaryColor: AppColors.primaryColor,
     bottomSheetTheme: const BottomSheetThemeData(
@@ -52,6 +53,7 @@ class AppTheme {
     ),
     cardColor: AppColors.darkCardColor,
     primaryColor: AppColors.primaryColor,
+    dividerColor: AppColors.darkDividerColor,
     splashColor: AppColors.primaryColor,
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: Colors.transparent,

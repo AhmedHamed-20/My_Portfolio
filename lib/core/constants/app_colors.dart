@@ -9,6 +9,8 @@ class AppColors {
   static const Color grayColor = Color(0xFFABB2BF);
   static const Color lightLabelTextColor = Color(0xFF333333);
   static const Color darkLabelTextColor = Color(0xFFFAFAF8);
+  static const Color lightDividerColor = Color(0xFF333333);
+  static const Color darkDividerColor = Color(0xFFFAFAF8);
   static const Color lightTitleTextColor = Colors.black;
   static const Color darkTitleTextColor = Colors.white;
 }
