@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:my_portfolio/features/Home/view/screens/projects_screen.dart';
 
 import '../../features/Home/view/screens/home_page.dart';
 
@@ -11,6 +12,10 @@ class AppRouter {
       GoRoute(
         path: AppRoutesNames.home,
         builder: (context, state) => const HomePage(),
+      ),
+      GoRoute(
+        path: AppRoutesNames.projects,
+        builder: (context, state) => const ProjectsScreen(),
       ),
     ],
   );

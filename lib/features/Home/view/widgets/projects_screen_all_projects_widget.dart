@@ -1,33 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
-import 'package:my_portfolio/core/constants/app_padding.dart';
-import 'package:my_portfolio/core/constants/app_radius.dart';
 import 'package:my_portfolio/core/extensions/extensions.dart';
-import 'package:my_portfolio/core/routes/app_routes_names.dart';
-import 'package:my_portfolio/core/widgets/card_widget.dart';
 
-import '../../../../core/widgets/sepration_title_with_button_widget.dart';
+import '../../../../core/constants/app_padding.dart';
+import '../../../../core/constants/app_radius.dart';
+import '../../../../core/widgets/card_widget.dart';
 
-class ProjectsWidget extends StatelessWidget {
-  const ProjectsWidget({super.key});
+class ProjectsScreenAllProjectsWidget extends StatelessWidget {
+  const ProjectsScreenAllProjectsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SeprationTitleWithButtonWidget(
-          buttonText: 'See all',
-          onPressed: () {
-            context.push(AppRoutesNames.projects);
-          },
-          title: 'Projects',
+        Text(
+          'Projects',
+          style: context.theme.textTheme.titleMedium,
         ),
         SizedBox(height: 16.h),
         Column(
           children: List.generate(
-              3,
+              9,
               (index) => CardWidget(
                     title: 'Project1',
                     description: "description",
