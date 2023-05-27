@@ -7,14 +7,15 @@ import '../constants/app_font_size.dart';
 class AppTheme {
   static ThemeData light = ThemeData(
     colorScheme: const ColorScheme.light(
-      secondary: AppColors.primaryColor,
-      primary: AppColors.primaryColor,
+      secondary: AppColors.primaryColorLight,
+      primary: AppColors.primaryColorLight,
       background: AppColors.lightBackgroundColor,
     ),
-    splashColor: AppColors.primaryColor,
+    scaffoldBackgroundColor: AppColors.lightBackgroundColor,
+    splashColor: AppColors.primaryColorLight,
     dividerColor: AppColors.lightDividerColor,
     cardColor: AppColors.lightCardColor,
-    primaryColor: AppColors.primaryColor,
+    primaryColor: AppColors.primaryColorLight,
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: Colors.transparent,
       modalBackgroundColor: Colors.transparent,
@@ -47,14 +48,15 @@ class AppTheme {
   );
   static ThemeData dark = ThemeData(
     colorScheme: const ColorScheme.dark(
-      secondary: AppColors.primaryColor,
-      primary: AppColors.primaryColor,
+      secondary: AppColors.primaryColorDark,
+      primary: AppColors.primaryColorDark,
       background: AppColors.darkBackgroundColor,
     ),
+    scaffoldBackgroundColor: AppColors.darkBackgroundColor,
     cardColor: AppColors.darkCardColor,
-    primaryColor: AppColors.primaryColor,
+    primaryColor: AppColors.primaryColorDark,
     dividerColor: AppColors.darkDividerColor,
-    splashColor: AppColors.primaryColor,
+    splashColor: AppColors.primaryColorDark,
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: Colors.transparent,
       modalBackgroundColor: Colors.transparent,

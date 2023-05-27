@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_portfolio/core/constants/app_radius.dart';
 import 'package:my_portfolio/core/extensions/extensions.dart';
 import 'package:my_portfolio/core/routes/app_routes_names.dart';
+import 'package:my_portfolio/features/Home/view_model/home_cubit.dart';
 
 import '../../../../core/widgets/default_button.dart';
 
@@ -12,6 +14,7 @@ class IntroWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final homeCubit = BlocProvider.of<HomeCubit>(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -28,8 +31,19 @@ class IntroWidget extends StatelessWidget {
               children: [
                 DefaultButton(buttonText: 'Download Cv', onPressed: () {}),
                 SizedBox(width: 12.w),
-                IconButton(
-                    onPressed: () {}, icon: const Icon(Icons.light_mode)),
+                BlocBuilder<HomeCubit, HomeState>(
+                  builder: (context, state) => IconButton(
+                    onPressed: () {
+                      homeCubit.changeTheme();
+                    },
+                    icon: Icon(
+                      //0 is dark mode and 1 is light mode
+                      state.appThemeModeStatus.index == 0
+                          ? Icons.dark_mode
+                          : Icons.light_mode,
+                    ),
+                  ),
+                ),
               ],
             ),
           ],

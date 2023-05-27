@@ -12,22 +12,24 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: EdgeInsets.symmetric(
-          horizontal: context.appWidth * 0.2,
-          vertical: context.appHeight * 0.08),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const IntroWidget(),
-          SizedBox(height: 32.h),
-          const ProjectsWidget(),
-          SizedBox(height: 32.h),
-          const SkillsPartWidget(),
-          SizedBox(height: 32.h),
-          const FooterWidget(),
-        ],
+    return Scaffold(
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(
+            horizontal: context.appWidth * 0.2,
+            vertical: context.appHeight * 0.08),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const IntroWidget(),
+            SizedBox(height: 32.h),
+            const ProjectsWidget(),
+            SizedBox(height: 32.h),
+            const SkillsPartWidget(),
+            SizedBox(height: 32.h),
+            const FooterWidget(),
+          ],
+        ),
       ),
     );
   }

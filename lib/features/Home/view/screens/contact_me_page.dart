@@ -11,39 +11,41 @@ class ContactMePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: SingleChildScrollView(
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              padding: EdgeInsets.symmetric(
+                  horizontal: context.appWidth * 0.2,
+                  vertical: context.appHeight * 0.08),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const CirclePhotoWithNameWidget(
+                    name: 'Ahmed Mohamed',
+                    photoUrl:
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbNSPYsM7A7dNjERy02PB583vIktszIwBaY7Jjxf1rfjHzQQoxXjdctFZItKJpHkIa0Y&usqp=CAU',
+                  ),
+                  SizedBox(height: 32.h),
+                  const ContactsWidget(),
+                  // SizedBox(height: 32.h),
+                ],
+              ),
+            ),
+          ),
+          Padding(
             padding: EdgeInsets.symmetric(
                 horizontal: context.appWidth * 0.2,
                 vertical: context.appHeight * 0.08),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const CirclePhotoWithNameWidget(
-                  name: 'Ahmed Mohamed',
-                  photoUrl:
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbNSPYsM7A7dNjERy02PB583vIktszIwBaY7Jjxf1rfjHzQQoxXjdctFZItKJpHkIa0Y&usqp=CAU',
-                ),
-                SizedBox(height: 32.h),
-                const ContactsWidget(),
-                // SizedBox(height: 32.h),
-              ],
+            child: const Align(
+              alignment: AlignmentDirectional.bottomCenter,
+              child: FooterWidget(),
             ),
           ),
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: context.appWidth * 0.2,
-              vertical: context.appHeight * 0.08),
-          child: const Align(
-            alignment: AlignmentDirectional.bottomCenter,
-            child: FooterWidget(),
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

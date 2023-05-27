@@ -11,24 +11,26 @@ class ProjectsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: EdgeInsets.symmetric(
-          horizontal: context.appWidth * 0.2,
-          vertical: context.appHeight * 0.08),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const CirclePhotoWithNameWidget(
-            name: 'Ahmed Mohamed',
-            photoUrl:
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbNSPYsM7A7dNjERy02PB583vIktszIwBaY7Jjxf1rfjHzQQoxXjdctFZItKJpHkIa0Y&usqp=CAU',
-          ),
-          SizedBox(height: 32.h),
-          const ProjectsScreenAllProjectsWidget(),
-          SizedBox(height: 32.h),
-          const FooterWidget(),
-        ],
+    return Scaffold(
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(
+            horizontal: context.appWidth * 0.2,
+            vertical: context.appHeight * 0.08),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const CirclePhotoWithNameWidget(
+              name: 'Ahmed Mohamed',
+              photoUrl:
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbNSPYsM7A7dNjERy02PB583vIktszIwBaY7Jjxf1rfjHzQQoxXjdctFZItKJpHkIa0Y&usqp=CAU',
+            ),
+            SizedBox(height: 32.h),
+            const ProjectsScreenAllProjectsWidget(),
+            SizedBox(height: 32.h),
+            const FooterWidget(),
+          ],
+        ),
       ),
     );
   }

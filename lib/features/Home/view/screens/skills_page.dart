@@ -12,53 +12,55 @@ class SkillsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Expanded(
-          child: SingleChildScrollView(
-            padding: EdgeInsets.symmetric(
-                horizontal: context.appWidth * 0.2,
-                vertical: context.appHeight * 0.08),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const CirclePhotoWithNameWidget(
-                  name: 'Ahmed Mohamed',
-                  photoUrl:
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbNSPYsM7A7dNjERy02PB583vIktszIwBaY7Jjxf1rfjHzQQoxXjdctFZItKJpHkIa0Y&usqp=CAU',
-                ),
-                SizedBox(height: 32.h),
-                Text(
-                  'Skills',
-                  style: context.theme.textTheme.titleMedium,
-                ),
-                Column(
-                  children: List.generate(
-                    5,
-                    (index) => const Padding(
-                      padding: EdgeInsets.all(AppPadding.p10),
-                      child: SkillsTitleWidget(
-                        title: 'Dart',
+    return Scaffold(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              padding: EdgeInsets.symmetric(
+                  horizontal: context.appWidth * 0.2,
+                  vertical: context.appHeight * 0.08),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const CirclePhotoWithNameWidget(
+                    name: 'Ahmed Mohamed',
+                    photoUrl:
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbNSPYsM7A7dNjERy02PB583vIktszIwBaY7Jjxf1rfjHzQQoxXjdctFZItKJpHkIa0Y&usqp=CAU',
+                  ),
+                  SizedBox(height: 32.h),
+                  Text(
+                    'Skills',
+                    style: context.theme.textTheme.titleMedium,
+                  ),
+                  Column(
+                    children: List.generate(
+                      5,
+                      (index) => const Padding(
+                        padding: EdgeInsets.all(AppPadding.p10),
+                        child: SkillsTitleWidget(
+                          title: 'Dart',
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: context.appWidth * 0.2,
-              vertical: context.appHeight * 0.08),
-          child: const Align(
-            alignment: AlignmentDirectional.bottomCenter,
-            child: FooterWidget(),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: context.appWidth * 0.2,
+                vertical: context.appHeight * 0.08),
+            child: const Align(
+              alignment: AlignmentDirectional.bottomCenter,
+              child: FooterWidget(),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
