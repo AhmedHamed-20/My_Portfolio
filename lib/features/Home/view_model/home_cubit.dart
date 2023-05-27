@@ -8,10 +8,13 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(const HomeState());
 
   void changeTheme() {
-    if (state.appThemeModeStatus == AppThemeModeStatus.dark) {
-      emit(state.copyWith(appThemeModeStatus: AppThemeModeStatus.light));
-    } else {
-      emit(state.copyWith(appThemeModeStatus: AppThemeModeStatus.dark));
+    switch (state.appThemeModeStatus) {
+      case AppThemeModeStatus.light:
+        emit(state.copyWith(appThemeModeStatus: AppThemeModeStatus.dark));
+        break;
+      case AppThemeModeStatus.dark:
+        emit(state.copyWith(appThemeModeStatus: AppThemeModeStatus.light));
+        break;
     }
   }
 }
