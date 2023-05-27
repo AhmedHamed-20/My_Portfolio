@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:my_portfolio/core/constants/app_padding.dart';
 import 'package:my_portfolio/core/extensions/extensions.dart';
+import 'package:my_portfolio/core/routes/app_routes_names.dart';
 import 'package:my_portfolio/core/widgets/skills_title_widget.dart';
 
 import '../../../../core/widgets/sepration_title_with_button_widget.dart';
@@ -17,7 +19,9 @@ class SkillsPartWidget extends StatelessWidget {
         SeprationTitleWithButtonWidget(
           title: 'Skills',
           buttonText: 'See all',
-          onPressed: () {},
+          onPressed: () {
+            context.push(AppRoutesNames.skills);
+          },
         ),
         Divider(
           color: context.theme.dividerColor,

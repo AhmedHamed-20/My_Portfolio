@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:my_portfolio/features/Home/view/screens/projects_page.dart';
+import 'package:my_portfolio/features/Home/view/screens/skills_page.dart';
 
 import '../../features/Home/view/screens/contact_me_page.dart';
 import '../../features/Home/view/screens/home_page.dart';
@@ -21,7 +22,11 @@ class AppRouter {
       GoRoute(
         path: AppRoutesNames.contact,
         builder: (context, state) => const ContactMePage(),
-      )
+      ),
+      GoRoute(
+        path: AppRoutesNames.skills,
+        builder: (context, state) => const SkillsPage(),
+      ),
     ],
   );
 }
