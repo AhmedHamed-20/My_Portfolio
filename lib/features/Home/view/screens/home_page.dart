@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:my_portfolio/core/constants/app_padding.dart';
 import 'package:my_portfolio/core/extensions/extensions.dart';
 
 import '../../../../core/widgets/footer_widget.dart';
-import '../../../../core/widgets/sepration_title_with_button_widget.dart';
 import '../widgets/intro_widget.dart';
 import '../widgets/projects_part_widget.dart';
 import '../widgets/skills_part_widget.dart';

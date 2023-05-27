@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:my_portfolio/core/constants/app_radius.dart';
 import 'package:my_portfolio/core/extensions/extensions.dart';
+import 'package:my_portfolio/core/routes/app_routes_names.dart';
 
 import '../../../../core/widgets/default_button.dart';
 
@@ -44,7 +46,9 @@ class IntroWidget extends StatelessWidget {
         ),
         SizedBox(height: 16.h),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            context.push(AppRoutesNames.contact);
+          },
           style: ButtonStyle(
             padding: MaterialStateProperty.all(
               const EdgeInsets.all(0),
